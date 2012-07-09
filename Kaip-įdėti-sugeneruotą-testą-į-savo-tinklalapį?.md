@@ -4,5 +4,5 @@ Atsidarę bet kurį tokio formato failą, pamatysime krūvą paveiksliukų fail�
 
 Žinant failų paskirtį, galima sukelti visus reikalingus į nuosavą tinklalapį.  Norimam tinklalapio puslapyje tuomet belieka įdėti kodą:
 
-> <script type="text/javascript" language="javascript" src="quiz-data.js"></script>
-> <script type="text/javascript" language="javascript" src="quiz-core.js"></script>
+> &lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot; src=&quot;quiz-data.js&quot;&gt;&lt;/script&gt; <br />
+> &lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot; src=&quot;quiz-core.js&quot;&gt;&lt;/script&gt;
