@@ -1,0 +1,8 @@
+*PT Kūrėjas* sukurtus testus išsaugo failuose su _PTKF_ galūnėmis. Šiuos failus galima atsidaryti su bet kuria archyvavimo programa palaikančia ZIP failų formatą.
+
+Atsidarę bet kurį tokio formato failą, pamatysime krūvą paveiksliukų failų sunumeruotų nuo 0 iki n (n - kiek paveiksliukų yra teste minus vienas). Taip pat ten rasime _quiz-core.js_, _quiz-data.js_, _quiz-test.html_ failus. _quiz-core.js_ - tai JavaScript kalba parašytas failiukas, kuris atsakingas už tai kaip veikia testas. Vadinasi, dažniausiai šio failiuko redaguoti nereikia. Visiems testams jis turėtų būti vienodas. Tuo tarpu _quiz-data.js_  kaupia informaciją apie testą: klaidingus ir teisingus atsakymus bei išvis įmanomus variantus. Šį failiuką prieš kur nors keliant, tikėtina, kad gali tekti atitinkamai pagal situaciją paredaguoti (jei paveiksliukai saugomi bus ne ten pat kur ir šis duomenų failas, reikia pasikeisti paveiksliukų failų pavadinimus į pilnus jų adresus). _quiz-test.html_ - tai sugeneruojamas HTML failas, kuris gali būti atidarytas su bet kokia naršykle. Išpakavus _PTKF_ failo turinį į kokį vieną katalogą ir pasileidus šį HTML failiuką, galima atlikti testą.
+
+Žinant failų paskirtį, galima sukelti visus reikalingus į nuosavą tinklalapį.  Norimam tinklalapio puslapyje tuomet belieka įdėti kodą:
+
+> &lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot; src=&quot;quiz-data.js&quot;&gt;&lt;/script&gt; <br />
+> &lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot; src=&quot;quiz-core.js&quot;&gt;&lt;/script&gt;
