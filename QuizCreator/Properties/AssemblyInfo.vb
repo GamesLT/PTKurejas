@@ -1,4 +1,5 @@
-﻿Imports System.Reflection
+﻿Imports System.Resources
+Imports System.Reflection
 Imports System.Runtime.CompilerServices
 Imports System.Runtime.InteropServices
 
@@ -8,18 +9,18 @@ Imports System.Runtime.InteropServices
 ' change them to the information which is associated with the assembly
 ' you compile.
 
-<assembly: AssemblyTitle("QuizCreator")>
-<assembly: AssemblyDescription("")>
-<assembly: AssemblyConfiguration("")>
-<assembly: AssemblyCompany("")>
-<assembly: AssemblyProduct("QuizCreator")>
-<assembly: AssemblyCopyright("Copyright 2009")>
-<assembly: AssemblyTrademark("")>
-<assembly: AssemblyCulture("")>
+<Assembly: AssemblyTitle("PTKurejas")>
+<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyConfiguration("")>
+<Assembly: AssemblyCompany("")>
+<Assembly: AssemblyProduct("PTKurejas")>
+<Assembly: AssemblyCopyright("Copyright 2009-2016")>
+<Assembly: AssemblyTrademark("")>
+<Assembly: AssemblyCulture("")>
 
 ' This sets the default COM visibility of types in the assembly to invisible.
 ' If you need to expose a type to COM, use <ComVisible(true)> on that type.
-<assembly: ComVisible(False)>
+<Assembly: ComVisible(False)>
 
 ' The assembly version has following format :
 '
@@ -28,4 +29,5 @@ Imports System.Runtime.InteropServices
 ' You can specify all values by your own or you can build default build and revision
 ' numbers with the '*' character (the default):
 
-<assembly: AssemblyVersion("1.0.*")>
+<Assembly: AssemblyVersion("0.1.1")>
+<Assembly: NeutralResourcesLanguage("lt-LT")>

@@ -18,8 +18,8 @@ Namespace My
 		
 		Public ReadOnly Property Revision As UInteger
 			Get
-				Return 0
-			End Get
+                Return 1
+            End Get
 		End Property
 		
 		Public ReadOnly Property Major As UInteger
@@ -30,14 +30,14 @@ Namespace My
 		
 		Public ReadOnly Property Author As String
 			Get
-				Return "MekDrop <mekdrop@gmail.com>"				
-			End Get
+                Return "Raimondas Rimkevièius (aka MekDrop) <github@mekdrop.name>"
+            End Get
 		End Property
 		
 		Public ReadOnly Property MoreInfoURL As Uri
 			Get
-				Return New Uri("http://www.google.com/search?q=PTK%C5%ABr%C4%97jas")				
-			End Get
+                Return New Uri("https://github.com/MekDrop/PTKurejas")
+            End Get
 		End Property
 		
 		Public ReadOnly Property DevYearsFrom As UInt16
@@ -45,22 +45,16 @@ Namespace My
 				Return 2009				
 			End Get
 		End Property
-		
-		Public ReadOnly Property DevYearsTo As UInt16
-			Get
-				Return 2009				
-			End Get
-		End Property
-		
-		Public ReadOnly Property LatestQuizCoreUrl As Uri
-			Get
-				Return New Uri("http://mekdrop.googlepages.com/photo_quiz.js")				
-			End Get
-		End Property
-		
-		'#Region Other Functions
-		
-		Public ReadOnly Property Full As String
+
+        Public ReadOnly Property DevYearsTo As UInt16
+            Get
+                Return 2016
+            End Get
+        End Property
+
+        '#Region Other Functions
+
+        Public ReadOnly Property Full As String
 			Get
 				Return Me.Major.ToString() + "."  + Me.Minor.ToString() + "." + Me.Revision.ToString()				
 			End Get

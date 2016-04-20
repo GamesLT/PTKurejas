@@ -182,9 +182,9 @@ Public Partial Class MainForm
 	End Sub
 		
 	Sub ToolStripMenuItem2Click(sender As Object, e As EventArgs)
-		Dim txt As String = my.VersionInfo.AppName + vbcrlf
-			txt			 += "------------------------------------------------------------------------------------------------------------------" + vbcrlf
-			txt			 += "Versija: " + my.VersionInfo.Full + vbcrlf			
+		Dim txt As String = my.VersionInfo.AppName + vbCrLf
+        txt += "------------------------------------------------------------------" + vbCrLf
+        txt			 += "Versija: " + my.VersionInfo.Full + vbcrlf			
 			txt			 += "Kūrimo metai: " + my.VersionInfo.DevYears + vbcrlf
 			txt			 += "Autorius: " + my.VersionInfo.Author + vbcrlf
 			txt			 += "Daugiau informacijos: " + my.VersionInfo.MoreInfoURL.ToString()			
