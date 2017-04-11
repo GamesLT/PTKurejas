@@ -1,5 +1,3 @@
-PT Kūrėjas yra parašytas naudojantis _Microsoft .NET Framework 2.0_ bibliotekomis, todėl norint jį paleisti reikia, kad kompiuteryje būtų įdiegta bent 2.0 šios blibliotekos versija. 
+PT Kūrėjas yra parašytas naudojantis _Microsoft .NET Framework 3.5_ bibliotekomis, todėl norint jį paleisti reikia, kad kompiuteryje būtų įdiegta bent 3.5 šios blibliotekos versija. 
 
-Ją galima atsiųsti rasti čia: 
-* [X86 procesoriui](http://www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=0856eacb-4362-4b0d-8edd-aab15c5e04f5);
-* [X64 procesoriui](http://www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=0856eacb-4362-4b0d-8edd-aab15c5e04f5).
+Ją galima atsiųsti rasti [Microsoft siuntinių tinklalapyje](https://www.microsoft.com/en-us/download/details.aspx?id=21).
