@@ -1,1 +1,0 @@
-Deja, šiuo metu, atrodo, jau niekur :( 
