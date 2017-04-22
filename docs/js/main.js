@@ -1,1 +1,3 @@
-
+$(function() {
+	$('.focus').focus();
+});

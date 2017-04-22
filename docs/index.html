@@ -12,9 +12,10 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/5afe5dfd17.css">
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" integrity="sha256-0rguYS0qgS6L4qVzANq4kjxPLtvnp5nn2nB5G1lWRv4=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>		
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -35,10 +36,11 @@
             </div>
             <div class="col-lg-6 col-sm-6 col-md-6">
                 <h1>PTKūrėjas</h1>
-                <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+                <p>Tai programėlė, kurios pagalba galima susikurti paveiksliukų testus, kurie vėliau gali būti įterpiami į tinklalapius.</p>
+				        <p><a class="btn btn-default btn-lg focus" href="https://github.com/GamesLT/PTKurejas/releases" role="button"><i class="fa fa-download" aria-hidden="true"></i> Atsisiųsti</a>
+						<a class="btn btn-primary btn-lg" href="https://github.com/GamesLT/PTKurejas#fork-destination-box" role="button"><i class="fa fa-github" aria-hidden="true"></i> Pradėti kopiją</a></p>
             </div>
         </div>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p>
       </div>
     </div>
 
@@ -46,29 +48,30 @@
       <!-- Example row of columns -->
       <div class="row">
         <div class="col-md-4">
-          <h2>Heading</h2>
+          <h2></h2>
           <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
           <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div>
+		        <div class="col-md-4">
+          <h2>Kaip atrodo sugeneruoti testai?</h2>
+          <p></p>
+        </div>
         <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          <h2>Kaip įdėti sugeneruotą testą į savo tinklalapį?</h2>
+          <p><i>PT Kūrėjas</i> sukurtus testus išsaugo failuose su <i>PTKF</i> galūnėmis. Šiuos failus galima atsidaryti su bet kuria archyvavimo programa palaikančia ZIP failų formatą.</p>
+
+<p>Atsidarę bet kurį tokio formato failą, pamatysime krūvą paveiksliukų failų sunumeruotų nuo 0 iki n (n - kiek paveiksliukų yra teste minus vienas). Taip pat ten rasime <i>quiz-core.js</i>, <i>quiz-data.js</i>, <i>quiz-test.html</i> failus. <i>quiz-core.js</i> - tai JavaScript kalba parašytas failiukas, kuris atsakingas už tai kaip veikia testas. Vadinasi, dažniausiai šio failiuko redaguoti nereikia. Visiems testams jis turėtų būti vienodas. Tuo tarpu <i>quiz-data.js</i>  kaupia informaciją apie testą: klaidingus ir teisingus atsakymus bei išvis įmanomus variantus. Šį failiuką prieš kur nors keliant, tikėtina, kad gali tekti atitinkamai pagal situaciją paredaguoti (jei paveiksliukai saugomi bus ne ten pat kur ir šis duomenų failas, reikia pasikeisti paveiksliukų failų pavadinimus į pilnus jų adresus). <i>quiz-test.html</i> - tai sugeneruojamas HTML failas, kuris gali būti atidarytas su bet kokia naršykle. Išpakavus <i>PTKF</i> failo turinį į kokį vieną katalogą ir pasileidus šį HTML failiuką, galima atlikti testą.</p>
+
+<p>Žinant failų paskirtį, galima sukelti visus reikalingus į nuosavą tinklalapį.  Norimam tinklalapio puslapyje tuomet belieka įdėti kodą:
+<pre>&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot; src=&quot;quiz-data.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot; src=&quot;quiz-core.js&quot;&gt;&lt;/script&gt;</pre>
+</p>
+
        </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
       </div>
 
       <hr>
-
-      <footer>
-        <p>&copy; Company 2015</p>
-      </footer>
     </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
         <script src="js/main.js"></script>
     </body>
 </html>
