@@ -62,15 +62,15 @@ Namespace My
     End Class
 
     ' Register extension in my namespace
-    <HideModuleName> _
-	Friend Module MyVersionInfoModule
-		Private instance As New MyVersionInfoClass
-		
-		Public ReadOnly Property VersionInfo() As MyVersionInfoClass
-			<DebuggerHidden> _
-			Get
-				Return instance
-			End Get
-		End Property
-	End Module
+    <HideModuleName>
+    Friend Module MyVersionInfoModule
+        Private instance As New MyVersionInfoClass
+
+        Public ReadOnly Property VersionInfo() As MyVersionInfoClass
+            <DebuggerHidden>
+            Get
+                Return instance
+            End Get
+        End Property
+    End Module
 End Namespace
