@@ -9,7 +9,6 @@
         <title>PTKūrėjas</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="https://use.fontawesome.com/5afe5dfd17.css">
@@ -38,7 +37,7 @@
                 <h1>PTKūrėjas</h1>
                 <p>Tai programėlė, kurios pagalba galima susikurti paveiksliukų testus, kurie vėliau gali būti įterpiami į tinklalapius.</p>
 				        <p><a class="btn btn-default btn-lg focus" href="https://github.com/GamesLT/PTKurejas/releases" role="button"><i class="fa fa-download" aria-hidden="true"></i> Atsisiųsti</a>
-						<a class="btn btn-primary btn-lg" href="https://github.com/GamesLT/PTKurejas#fork-destination-box" role="button"><i class="fa fa-github" aria-hidden="true"></i> Pradėti kopiją</a></p>
+						<a class="btn btn-primary btn-lg" href="https://github.com/GamesLT/PTKurejas#fork-destination-box" role="button"><i class="fa fa-github" aria-hidden="true"></i> Pasidaryti kopiją (angl. fork)</a></p>
             </div>
         </div>
       </div>
@@ -47,14 +46,16 @@
     <div class="container">
       <!-- Example row of columns -->
       <div class="row">
-        <div class="col-md-4">
-          <h2></h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+        <div class="col-md-3 firstcol">
+		  <p><strong>PTKūrėjas</strong> yra platinamas pagal atviro kodo <a href="https://github.com/GamesLT/PTKurejas/blob/master/LICENSE">„Microsoft Public“ licenziją</a>, kuri suteikia galimybę keisti programos kodus bei prisitaikyti savo reikmėms. Žinoma, privalu nepamiršti tai daryti nepakeičiant licenzicijos informacijos arba programinė įrangoje paliktų kreditų.</p><p>Jokie grantiniai aptarnavimai naudojantis šia programine įranga negalioja, tačiau iškilus problemai galite apie tai <a href="https://github.com/GamesLT/PTKurejas/issues" target="_blank">pranešti per GitHub</a>. Ten pat galima atsiųsti ir kodo pakeitimus, kurie ateityje turėtų būti platinami su šia programa.</p>
         </div>
-		        <div class="col-md-4">
+		        <div class="col-md-5">
           <h2>Kaip atrodo sugeneruoti testai?</h2>
-          <p></p>
+          <p>Štai keletas tokių pavyzdžių:</p>
+	 	  <script type="text/javascript" src="js/samples/Ar gerai žinai geriausius žaidimus 2016 pagal Metacritic/quiz-core.js"></script>
+		  <script type="text/javascript" src="js/samples/Ar gerai žinai geriausius žaidimus 2016 pagal Metacritic/quiz-data.js"></script>
+		  <br />
+  		  <script type="text/javascript" src="js/samples/Ar gerai žinai koks tai RPGMaker žaidimas/quiz-data.js"></script>		  
         </div>
         <div class="col-md-4">
           <h2>Kaip įdėti sugeneruotą testą į savo tinklalapį?</h2>
@@ -63,8 +64,8 @@
 <p>Atsidarę bet kurį tokio formato failą, pamatysime krūvą paveiksliukų failų sunumeruotų nuo 0 iki n (n - kiek paveiksliukų yra teste minus vienas). Taip pat ten rasime <i>quiz-core.js</i>, <i>quiz-data.js</i>, <i>quiz-test.html</i> failus. <i>quiz-core.js</i> - tai JavaScript kalba parašytas failiukas, kuris atsakingas už tai kaip veikia testas. Vadinasi, dažniausiai šio failiuko redaguoti nereikia. Visiems testams jis turėtų būti vienodas. Tuo tarpu <i>quiz-data.js</i>  kaupia informaciją apie testą: klaidingus ir teisingus atsakymus bei išvis įmanomus variantus. Šį failiuką prieš kur nors keliant, tikėtina, kad gali tekti atitinkamai pagal situaciją paredaguoti (jei paveiksliukai saugomi bus ne ten pat kur ir šis duomenų failas, reikia pasikeisti paveiksliukų failų pavadinimus į pilnus jų adresus). <i>quiz-test.html</i> - tai sugeneruojamas HTML failas, kuris gali būti atidarytas su bet kokia naršykle. Išpakavus <i>PTKF</i> failo turinį į kokį vieną katalogą ir pasileidus šį HTML failiuką, galima atlikti testą.</p>
 
 <p>Žinant failų paskirtį, galima sukelti visus reikalingus į nuosavą tinklalapį.  Norimam tinklalapio puslapyje tuomet belieka įdėti kodą:
-<pre>&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot; src=&quot;quiz-data.js&quot;&gt;&lt;/script&gt;
-&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot; src=&quot;quiz-core.js&quot;&gt;&lt;/script&gt;</pre>
+<pre>&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot; src=&quot;quiz-core.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; language=&quot;javascript&quot; src=&quot;quiz-data.js&quot;&gt;&lt;/script&gt;</pre>
 </p>
 
        </div>

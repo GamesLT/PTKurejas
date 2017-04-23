@@ -145,3 +145,7 @@ body {
 		z-index: 0;
     }
 }
+
+.firstcol {
+	padding-top: 2.8em!important;
+}

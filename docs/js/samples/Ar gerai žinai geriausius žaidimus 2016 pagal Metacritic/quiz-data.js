@@ -30,16 +30,16 @@ var quiz_photo_data = ptkurejas_quiz(
 		 'Unreal Tournament'
 	 ] ,
 	 "images" : {
-		0 : '0.png',
-		1 : '1.png',
-		2 : '2.png',
-		4 : '3.png',
-		7 : '4.png',
-		10 : '5.png',
-		11 : '6.png',
-		14 : '7.png',
-		16 : '8.png',
-		18 : '9.png'
+		0 : 'js/samples/Ar gerai žinai geriausius žaidimus 2016 pagal Metacritic/0.png',
+		1 : 'js/samples/Ar gerai žinai geriausius žaidimus 2016 pagal Metacritic/1.png',
+		2 : 'js/samples/Ar gerai žinai geriausius žaidimus 2016 pagal Metacritic/2.png',
+		4 : 'js/samples/Ar gerai žinai geriausius žaidimus 2016 pagal Metacritic/3.png',
+		7 : 'js/samples/Ar gerai žinai geriausius žaidimus 2016 pagal Metacritic/4.png',
+		10 : 'js/samples/Ar gerai žinai geriausius žaidimus 2016 pagal Metacritic/5.png',
+		11 : 'js/samples/Ar gerai žinai geriausius žaidimus 2016 pagal Metacritic/6.png',
+		14 : 'js/samples/Ar gerai žinai geriausius žaidimus 2016 pagal Metacritic/7.png',
+		16 : 'js/samples/Ar gerai žinai geriausius žaidimus 2016 pagal Metacritic/8.png',
+		18 : 'js/samples/Ar gerai žinai geriausius žaidimus 2016 pagal Metacritic/9.png'
 	 }
   }
 );

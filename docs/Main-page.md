@@ -1,1 +1,0 @@
-Sorry, this page doesn't exist yet. This software isn't translated yet to English.
