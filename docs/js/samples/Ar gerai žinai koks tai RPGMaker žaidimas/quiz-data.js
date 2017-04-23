@@ -37,15 +37,15 @@ var quiz_photo_data =
 		 'Valiant: Resurrection'
 	 ] ,
 	 "images" : {
-		1 : 'js/samples/Ar gerai žinai koks tai RPGMaker žaidimas/0.png',
-		3 : 'js/samples/Ar gerai žinai koks tai RPGMaker žaidimas/1.png',
-		5 : 'js/samples/Ar gerai žinai koks tai RPGMaker žaidimas/2.png',
-		8 : 'js/samples/Ar gerai žinai koks tai RPGMaker žaidimas/3.png',
-		11 : 'js/samples/Ar gerai žinai koks tai RPGMaker žaidimas/4.png',
-		13 : 'js/samples/Ar gerai žinai koks tai RPGMaker žaidimas/5.png',
-		17 : 'js/samples/Ar gerai žinai koks tai RPGMaker žaidimas/6.png',
-		18 : 'js/samples/Ar gerai žinai koks tai RPGMaker žaidimas/7.png',
-		19 : 'js/samples/Ar gerai žinai koks tai RPGMaker žaidimas/8.png',
-		25 : 'js/samples/Ar gerai žinai koks tai RPGMaker žaidimas/9.png'
+		1 : '//gameslt.github.io/PTKurejas/js/samples/Ar gerai žinai koks tai RPGMaker žaidimas/0.png',
+		3 : '//gameslt.github.io/PTKurejas/js/samples/Ar gerai žinai koks tai RPGMaker žaidimas/1.png',
+		5 : '//gameslt.github.io/PTKurejas/js/samples/Ar gerai žinai koks tai RPGMaker žaidimas/2.png',
+		8 : '//gameslt.github.io/PTKurejas/js/samples/Ar gerai žinai koks tai RPGMaker žaidimas/3.png',
+		11 : '//gameslt.github.io/PTKurejas/js/samples/Ar gerai žinai koks tai RPGMaker žaidimas/4.png',
+		13 : '//gameslt.github.io/PTKurejas/js/samples/Ar gerai žinai koks tai RPGMaker žaidimas/5.png',
+		17 : '//gameslt.github.io/PTKurejas/js/samples/Ar gerai žinai koks tai RPGMaker žaidimas/6.png',
+		18 : '//gameslt.github.io/PTKurejas/js/samples/Ar gerai žinai koks tai RPGMaker žaidimas/7.png',
+		19 : '//gameslt.github.io/PTKurejas/js/samples/Ar gerai žinai koks tai RPGMaker žaidimas/8.png',
+		25 : '//gameslt.github.io/PTKurejas/js/samples/Ar gerai žinai koks tai RPGMaker žaidimas/9.png'
 	 }
   });
