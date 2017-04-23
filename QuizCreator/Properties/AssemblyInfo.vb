@@ -9,12 +9,12 @@ Imports System.Runtime.InteropServices
 ' change them to the information which is associated with the assembly
 ' you compile.
 
-<Assembly: AssemblyTitle("PTKurejas")>
-<Assembly: AssemblyDescription("")>
+<Assembly: AssemblyTitle("PTKūrejas")>
+<Assembly: AssemblyDescription("Programėlė paveiksliukais grįstų testų kūrimui")>
 <Assembly: AssemblyConfiguration("")>
-<Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("PTKurejas")>
-<Assembly: AssemblyCopyright("Copyright 2009-2016")>
+<Assembly: AssemblyCompany("Games.lt")>
+<Assembly: AssemblyProduct("PTKūrejas")>
+<Assembly: AssemblyCopyright("Copyright 2009-2017")>
 <Assembly: AssemblyTrademark("")>
 <Assembly: AssemblyCulture("")>
 
@@ -29,5 +29,6 @@ Imports System.Runtime.InteropServices
 ' You can specify all values by your own or you can build default build and revision
 ' numbers with the '*' character (the default):
 
-<Assembly: AssemblyVersion("0.1.1")>
+<Assembly: AssemblyVersion("0.1.2.0")>
 <Assembly: NeutralResourcesLanguage("lt-LT")>
+<Assembly: AssemblyFileVersion("0.1.2.0")>

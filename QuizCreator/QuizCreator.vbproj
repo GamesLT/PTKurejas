@@ -14,7 +14,7 @@
     <OptionExplicit>On</OptionExplicit>
     <OptionStrict>Off</OptionStrict>
     <OptionCompare>Binary</OptionCompare>
-    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
     <FileUpgradeFlags>
@@ -33,17 +33,18 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <SupportUrl>https://github.com/MekDrop/PTKurejas/issues</SupportUrl>
+    <SupportUrl>https://github.com/Gameslt/PTKurejas/issues</SupportUrl>
     <TargetCulture>lt-LT</TargetCulture>
     <ProductName>PTKurejas</ProductName>
-    <PublisherName>MekDrop</PublisherName>
+    <PublisherName>Games.lt</PublisherName>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
     <AutorunEnabled>true</AutorunEnabled>
     <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>0.1.1.0</ApplicationVersion>
+    <ApplicationVersion>0.1.2.0</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <OutputPath>bin\Debug\</OutputPath>
@@ -84,10 +85,13 @@
     <ManifestKeyFile>QuizCreator_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
-    <GenerateManifests>true</GenerateManifests>
+    <GenerateManifests>false</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
   </PropertyGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.Targets" />
   <ItemGroup>
@@ -103,6 +107,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
     <Import Include="Microsoft.VisualBasic" />
     <Import Include="System" />
     <Import Include="System.Collections" />
@@ -119,6 +128,11 @@
     <Compile Include="ParsingSystem.vb" />
     <Compile Include="Program.vb" />
     <Compile Include="Properties\AssemblyInfo.vb" />
+    <Compile Include="Properties\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="PTKFile.vb" />
     <Compile Include="TransferControl.vb" />
     <Compile Include="VersionInfo.vb" />
@@ -136,21 +150,26 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="app.ico" />
+    <None Include="Resources\quiz-core.js" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="Properties\app.manifest" />
     <None Include="QuizCreator_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
     <PublishFile Include="app.ico">
       <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
       <Group>
       </Group>
       <TargetPath>
       </TargetPath>
-      <PublishState>Exclude</PublishState>
-      <IncludeHash>True</IncludeHash>
       <FileType>File</FileType>
     </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\open-file-script.js" />
   </ItemGroup>
 </Project>

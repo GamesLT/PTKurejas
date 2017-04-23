@@ -107,8 +107,11 @@ Public Class ZipStorer
     'Method to open an existing storage
     Public Shared Function Open(ByVal _filename As String, ByVal _access As FileAccess) As ZipStorer
         Dim zip As New ZipStorer
+        If _access <> System.IO.FileAccess.Read Then
+            _access = FileAccess.Write
+        End If
         zip.FileName = _filename
-        zip.ZipFileStream = New FileStream(_filename, FileMode.Open, IIf(_access = System.IO.FileAccess.Read, System.IO.FileAccess.Read, System.IO.FileAccess.ReadWrite))
+        zip.ZipFileStream = New FileStream(_filename, FileMode.Open, _access)
         zip.Access = _access
 
         If zip.ReadFileInfo Then
@@ -143,10 +146,14 @@ Public Class ZipStorer
             offset = last.HeaderOffset + last.HeaderSize
         End If
 
+        If _comment Is Nothing Then
+            _comment = ""
+        End If
+
         'Prepare the fileinfo
         Dim zfe As New ZipFileEntry
         zfe.FilenameInZip = NormalizedFilename(_filenameInZip)
-        zfe.Comment = (IIf(_comment Is Nothing, "", _comment))
+        zfe.Comment = _comment
 
         'Even though we write the header now, it will have to be rewritten, since we don't know compressed size or crc.
         zfe.Crc32 = 0  'To be updated later
@@ -405,14 +412,16 @@ Public Class ZipStorer
 
     Private Sub UpdateCrcAndSizes(ByRef zfe As ZipFileEntry)
         Dim lastPos As Long = Me.ZipFileStream.Position  'remember position
+        Const MagicCRT As UInteger = 4294967295
+        Const UOne As UInteger = 1
 
         zfe.Crc32 = 0 Xor 4294967295
         Me.ZipFileStream.Position = zfe.FileOffset
-        For i As UInteger = 0 To zfe.FileSize - 1
+        For i As UInteger = 0 To zfe.FileSize - UOne
             Dim b As Byte = CByte(Me.ZipFileStream.ReadByte)
             zfe.Crc32 = ZipStorer.CrcTable((zfe.Crc32 Xor b) And 255) Xor (zfe.Crc32 >> 8)
         Next i
-        zfe.Crc32 = zfe.Crc32 Xor 4294967295
+        zfe.Crc32 = zfe.Crc32 Xor MagicCRT
 
         Me.ZipFileStream.Position = zfe.HeaderOffset + 14
         Me.ZipFileStream.Write(BitConverter.GetBytes(zfe.Crc32), 0, 4)  'Update CRC
@@ -443,6 +452,7 @@ Public Class ZipStorer
         Dim extraSize As UShort
         Dim commentSize As UShort
         Dim comprSize As UInteger
+        Const One As UShort = 1
 
         Try
             Me.ZipFileStream.Seek(0, SeekOrigin.Begin)
@@ -466,7 +476,7 @@ Public Class ZipStorer
                     'Just skip the record and file contents to reach the end-of-central-dir entry
                     Me.ZipFileStream.Seek(comprSize + filenameSize + extraSize, SeekOrigin.Current)
 
-                    ExistingFiles += 1
+                    ExistingFiles += One
                 ElseIf signature = 33639248 Then  'Central dir header
                     If Me.ZipFileStream.Read(header, 0, 42) < 42 Then
                         Return False 'error

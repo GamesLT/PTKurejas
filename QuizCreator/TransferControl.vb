@@ -50,18 +50,21 @@ Public Class TransferControl
 		Me.ClearThemAll()
 		file = f2
 	End Sub
-	
-	Public Sub Finish()		
-		For Each Answer As String In Me.Answers
-			file.OtherAnswersItems.Add(Answer)
-		Next
-		For Each Answer As String In Me.ImagesLinks.Keys
-			file.ImageAnswersItems.Add(answer, Me.Images.Item(Me.ImagesLinks.Item(answer)))
-		Next
-		RaiseEvent Finished()
-	End Sub
-	
-	Public Shared ReadOnly Property Instance As TransferControl
+
+    Public Sub Finish()
+        For Each Answer As String In Me.Answers
+            file.OtherAnswersItems.Add(Answer)
+        Next
+        For Each Answer As String In Me.ImagesLinks.Keys
+            Try
+                file.ImageAnswersItems.Add(Answer, Me.Images.Item(Me.ImagesLinks.Item(Answer)))
+            Catch Ex As Exception
+            End Try
+        Next
+        RaiseEvent Finished()
+    End Sub
+
+    Public Shared ReadOnly Property Instance As TransferControl
 		Get
 			Dim tc as New TransferControl()
 			Return tc			

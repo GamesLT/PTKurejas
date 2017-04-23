@@ -3,20 +3,13 @@
 ' User: Administrator
 ' Date: 2009.03.06
 ' Time: 23:38
-' 
-' To change this template use Tools | Options | Coding | Edit Standard Headers.
-'
-Public Partial Class MainForm
-	Public Sub New()
-		' The Me.InitializeComponent call is required for Windows Forms designer support.
-		Me.InitializeComponent()
-		
-		'
-		' TODO : Add constructor code after InitializeComponents
-		'
-	End Sub
-	
-	Private LastTrueName as String = ""
+Partial Public Class MainForm
+    Public Sub New()
+        ' The Me.InitializeComponent call is required for Windows Forms designer support.
+        Me.InitializeComponent()
+    End Sub
+
+    Private LastTrueName As String = ""
 
     Sub Button1Click(sender As Object, e As EventArgs) Handles button1.Click
         If CheckIfNameIsInList(Me.textBox1.Text.Trim()) Then
@@ -99,10 +92,14 @@ Public Partial Class MainForm
         If Name Is Nothing Then Return False
         If Name.Trim() = "" Then Return False
         For I As Integer = 0 To Me.listBox1.Items.Count - 1
-            If Me.listBox1.Items.Item(I).ToLower().Trim() = Name.ToLower().Trim() Then Return True
+            If Me.listBox1.Items(I).ToString().ToLower().Trim() = Name.ToLower().Trim() Then
+                Return True
+            End If
         Next
         For I As Integer = 0 To Me.dataGridView1.Rows.Count - 1
-            If Me.dataGridView1.Rows.Item(I).Cells.Item(1).Value.ToString().ToLower().Trim() = Name.ToLower().Trim() Then Return True
+            If Me.dataGridView1.Rows.Item(I).Cells.Item(1).Value.ToString().ToLower().Trim() = Name.ToLower().Trim() Then
+                Return True
+            End If
         Next
         Return False
     End Function
@@ -127,7 +124,9 @@ Public Partial Class MainForm
 
     Sub DataGridView1CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles dataGridView1.CellDoubleClick
         If e.ColumnIndex = 0 Then
-            If Me.OpenImageDialog(Me.dataGridView1.Rows.Item(e.RowIndex).Cells.Item(e.ColumnIndex).Value) Then
+            Dim iobj As Object = Me.dataGridView1.Rows.Item(e.RowIndex).Cells.Item(e.ColumnIndex).Value
+            Dim img As Image = CType(iobj, Image)
+            If Me.OpenImageDialog(img) Then
 
             End If
         End If
@@ -165,11 +164,12 @@ Public Partial Class MainForm
             Me.Enabled = False
             Dim file As New PTK.File.PTKFile()
             For I As Integer = 0 To Me.listBox1.Items.Count - 1
-                file.OtherAnswersItems.Add(Me.listBox1.Items.Item(I))
+                file.OtherAnswersItems.Add(Me.listBox1.Items.Item(I).ToString())
             Next
             For I As Integer = 0 To Me.dataGridView1.Rows.Count - 1
                 Try
-                    file.ImageAnswersItems.Add(Me.dataGridView1.Rows.Item(I).Cells.Item(1).Value, Me.dataGridView1.Rows.Item(I).Cells.Item(0).Value)
+                    Dim iobj As Object = Me.dataGridView1.Rows.Item(I).Cells.Item(0).Value
+                    file.ImageAnswersItems.Add(Me.dataGridView1.Rows.Item(I).Cells.Item(1).Value.ToString(), CType(iobj, Image))
                 Catch ex As Exception
                     Me.Enabled = True
                     MessageBox.Show("Du vienodi pavadinimai yra paveikslėlių sąraše. Išsaugojimas buvo nutrauktas.", "Klaida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
@@ -232,11 +232,12 @@ Public Partial Class MainForm
             Me.peržiūrėtiToolStripMenuItem.Text = "Redaguoti"
             Dim file As New PTK.File.PTKFile()
             For I As Integer = 0 To Me.listBox1.Items.Count - 1
-                file.OtherAnswersItems.Add(Me.listBox1.Items.Item(I))
+                file.OtherAnswersItems.Add(Me.listBox1.Items.Item(I).ToString())
             Next
             For I As Integer = 0 To Me.dataGridView1.Rows.Count - 1
                 Try
-                    file.ImageAnswersItems.Add(Me.dataGridView1.Rows.Item(I).Cells.Item(1).Value, Me.dataGridView1.Rows.Item(I).Cells.Item(0).Value)
+                    Dim iobj As Object = Me.dataGridView1.Rows.Item(I).Cells.Item(0).Value
+                    file.ImageAnswersItems.Add(Me.dataGridView1.Rows.Item(I).Cells.Item(1).Value.ToString(), CType(iobj, Image))
                 Catch ex As Exception
                     Me.Enabled = True
                     MessageBox.Show("Du vienodi pavadinimai yra paveikslėlių sąraše. Išsaugojimas buvo nutrauktas.", "Klaida", MessageBoxButtons.OK, MessageBoxIcon.Exclamation)
