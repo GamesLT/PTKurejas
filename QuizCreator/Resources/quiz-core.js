@@ -294,7 +294,7 @@ function ptkurejas_quiz(photo_data) {
 		if (bad_length == 0) {
 			txt += 'Esi tikras(-a) guru!!!';
 		} else if (bad_length/count < 0.14) {
-			txt += unescape('Esi%20tikras%28-a%29%20eksperas%28-%26%23279%3B%29%21%21');
+			txt += unescape('Esi%20tikras%28-a%29%20ekspertas%28-%26%23279%3B%29%21%21');
 		} else if (bad_length/count < 0.28) {
 			txt += unescape('Esi%20beveik%20ekspertas%28-%26%23279%3B%29%21');
 		} else if (bad_length/count < 0.47) {
