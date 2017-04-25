@@ -1,4 +1,4 @@
-[![License](https://img.shields.io/github/license/GamesLT/PTKurejas.svg?maxAge=2592000)](LICENSE) ![GitHub release](https://img.shields.io/github/release/GamesLT/PTKurejas.svg?maxAge=2592000)
+[![License](https://img.shields.io/github/license/GamesLT/PTKurejas.svg?maxAge=2592000)](LICENSE) ![GitHub release](https://img.shields.io/github/release/GamesLT/PTKurejas.svg)
 # PTKūrėjas
 
 *Sadly, this program right now is only available in Lithuanian language*
